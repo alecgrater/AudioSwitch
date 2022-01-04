@@ -16,7 +16,6 @@ void SetDefaultRecordDevice(tstring strDeviceName){
             continue;
         } else {
             tstring strCurrentDeviceName(data);
-            // TODO név általánosítás
             if(strDeviceName == strCurrentDeviceName){
                 HKEY hkGuid;
                 RegOpenKeyEx(hkCaptureDevices, lpwstrDeviceGuidKey , 0, KEY_READ | KEY_SET_VALUE | KEY_QUERY_VALUE | KEY_WOW64_64KEY | KEY_NOTIFY , &hkGuid);
@@ -41,7 +40,7 @@ void SetDefaultRecordDevice(tstring strDeviceName){
                 WORD hour = tstruct.tm_hour;
                 WORD minute = tstruct.tm_min;
                 WORD second = tstruct.tm_sec;
-                WORD millisec = 0x0; // hasrautés
+                WORD millisec = 0x0;
 
                 int k = 0;
                 *((WORD*)CustomRegistryDateValue + k++) = year;
