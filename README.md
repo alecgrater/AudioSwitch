@@ -28,4 +28,4 @@ The `SetDefaultRecordDevice` function in this C program iterates through the aud
 ## Limitations
 
 - The program assumes the specified device name exists in the registry.
-- Modifying the Windows registry should be done with caution as it can have 
+- Modifying the Windows registry should be done with caution as it can have unintended consequences if not done correctly.
